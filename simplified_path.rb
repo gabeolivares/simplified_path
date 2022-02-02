@@ -30,7 +30,7 @@ def simplified_path(path_string)
  simplified_path = []
  array_split = path_string.split('/')
 
- array_split.each_with_index do |char, index|
+ array_split.each do |char|
    next if char == '.' || char == ""
 
    if char == ".." && simplified_path.last != nil
